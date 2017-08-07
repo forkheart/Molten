@@ -17,7 +17,7 @@ include 'server.inc';
 
 $hostname = 'localhost';
 $port = '8964';
-//molten_cli_server_start($hostname, $port, 1);
+molten_cli_server_start($hostname, $port, 1);
 
 $url = 'http://' . $hostname . ':' . $port;
 
