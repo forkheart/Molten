@@ -1,5 +1,7 @@
 --TEST--
 molten status check
+--SKIPIF--
+<?php if ((version_compare(phpversion(), "5.5", "<"))) print "skip"; ?>
 --INI--
 molten.enable=1
 molten.tracing_cli=1
@@ -15,7 +17,7 @@ include 'server.inc';
 
 $hostname = 'localhost';
 $port = '8964';
-molten_cli_server_start($hostname, $port, 1);
+//molten_cli_server_start($hostname, $port, 1);
 
 $url = 'http://' . $hostname . ':' . $port;
 
